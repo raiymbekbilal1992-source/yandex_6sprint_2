@@ -1,4 +1,4 @@
-package pageObjects;
+package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -56,7 +56,6 @@ public class OrderPage {
 
     /**
      * Вводит название станции в поле поиска метро и выбирает первый совпавший вариант.
-     * Если хочешь выбрать конкретную станцию — ищем по тексту.
      */
     private void selectMetro(String stationName) {
         WebElement input = wait.until(ExpectedConditions.elementToBeClickable(metroInput));

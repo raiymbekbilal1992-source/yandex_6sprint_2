@@ -3,8 +3,8 @@ package tests;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.JavascriptExecutor;
-import pageObjects.MainPage;
-import pageObjects.OrderPage;
+import pageobjects.MainPage;
+import pageobjects.OrderPage;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -42,7 +42,7 @@ public class OrderTest extends BaseTest {
         MainPage mainPage = new MainPage(driver);
         mainPage.acceptCookies();
 
-        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 2500)");
+        mainPage.scrollToBottomOrderButton();
         mainPage.clickBottomOrderButton();
 
         OrderPage orderPage = new OrderPage(driver);
